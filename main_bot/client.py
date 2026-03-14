@@ -3,8 +3,8 @@ import os
 from dotenv import load_dotenv
 
 load_dotenv()
-API_KEY=os.getenv("API_KEY")
-API_SECRET=os.getenv("API_SECRET")
+API_KEY=os.getenv("API_KEY") or st.sercrets["API_KEY"]
+API_SECRET=os.getenv("API_SECRET") or st.sercrets["API_SECRET"]
 
 #MAIN LOGIC
 def get_client():
