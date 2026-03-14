@@ -9,6 +9,6 @@ API_SECRET=os.getenv("API_SECRET") or st.secrets.get("API_SECRET")
 
 #MAIN LOGIC
 def get_client():
-    client=Client(API_KEY,API_SECRET)
+    client=Client(API_KEY,API_SECRET, testnet=True)
     client.FUTURES_URL= "https://testnet.binancefuture.com/fapi"
     return client
