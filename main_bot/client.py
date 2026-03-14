@@ -4,11 +4,11 @@ import streamlit as st
 from dotenv import load_dotenv
 
 load_dotenv()
-API_KEY=os.getenv("API_KEY") or st.secrets.get["API_KEY"]
-API_SECRET=os.getenv("API_SECRET") or st.secrets.get["API_SECRET"]
+API_KEY=os.getenv("API_KEY") or st.secrets.get("API_KEY")
+API_SECRET=os.getenv("API_SECRET") or st.secrets.get("API_SECRET")
 
 #MAIN LOGIC
 def get_client():
     client=Client(API_KEY,API_SECRET)
-    client.FUTURES_URL= "https://testnet.binancefuture.com"
+    client.FUTURES_URL= "https://testnet.binancefuture.com/fapi"
     return client
